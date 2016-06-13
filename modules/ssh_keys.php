@@ -1,14 +1,14 @@
 <?php
 
 /*
-** Open the dialog for deleting a SSH Key
+** Open the dialog to delete a Key
 */
 if ($_GET['ssh_keys'] == 'delete')
 {
 	if (isset($_GET['name']))
 	{
 		echo '<h2>Clé SSH: '. $_GET['name'] .'</h2>
-		<h5 style="padding-top:30px;">Souhaiter vous supprimer cette clé SSH ?</h5>			
+		<h5 style="padding-top:30px;">Souhaitez vous supprimer cette clé SSH ?</h5>			
 		<a href="index.php?ssh_keys=confirm-delete&name='.$_GET['name'].'" class="btn btn-lg btn-success">Confirmer</a>	<a href="index.php?repository=view" class="btn btn-lg btn-default">Annuler</a>';
 	}
 }
@@ -43,10 +43,10 @@ else if ($_GET['ssh_keys'] == 'list')
 		}
 		if (isset($return_blih['message']))
 			if ($return_blih['message'] == 'sshkey uploaded')
-				echo '<div class="alert alert-success">La clé SSH à été envoyer sur le serveur.</div>';
+				echo '<div class="alert alert-success">La clé SSH à été envoyée sur le serveur.</div>';
 	}
 	if (isset($_GET['deleted']))
-		echo '<div class="alert alert-success">La clé SSH '.$_GET['deleted'].' à été supprimer.</div>';
+		echo '<div class="alert alert-success">La clé SSH '.$_GET['deleted'].' à été supprimée.</div>';
 	echo '
 	<table class="table table-striped" style="width:90%;">
 	  <thead>

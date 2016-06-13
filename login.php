@@ -48,13 +48,13 @@ else if (isset($_SESSION['login']) && isset($_SESSION['login2']) && blih_whoami(
 					if (blih_whoami() == 'Error')
 					{
 						echo '<div class="alert alert-danger">
-								<center>Identifiants incorrect</center>
+								<center>Identifiants incorrects</center>
 							  </div>';
 					}
 					else
 					{
 						echo '<div class="alert alert-success">
-								<center>Connexion à EpiGit reussi !</center>
+								<center>Connexion à EpiGit reussie !</center>
 							  </div>';
 					}
 				}
@@ -63,13 +63,13 @@ else if (isset($_SESSION['login']) && isset($_SESSION['login2']) && blih_whoami(
                   <div class="form-group">
                     <label for="inputLogin" class="col-lg-4 control-label" style="color:#666666;">Login Epitech</label>
                     <div class="col-lg-6" >
-                      <input type="text" class="form-control" id="inputLogin" name="inputLogin" placeholder="Veuillez indiquez votre login epitech">
+                      <input type="text" class="form-control" id="inputLogin" name="inputLogin" placeholder="Veuillez indiquer votre login epitech">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputUnix" class="col-lg-4 control-label" style="color:#666666;">Mot de passe UNIX</label>
                     <div class="col-lg-6">
-                      <input type="password" class="form-control" id="inputUnix" name="inputUnix" placeholder="Veuillez indiquez votre mot de passe UNIX">
+                      <input type="password" class="form-control" id="inputUnix" name="inputUnix" placeholder="Veuillez indiquer votre mot de passe UNIX">
                     </div>
                   </div>
 					<center>
