@@ -48,7 +48,7 @@ if (!isset($_SESSION['login']) && !isset($_SESSION['login2']) || blih_whoami() =
 							else
 							{
 								echo '<h2>Bienvenue sur EpiGit</h2>
-									<h5>A partir d\'ici vous pouvez gérer vos dépôts GIT ainsi que vos clés ssh autorisé.</h5>
+									<h5>A partir d\'ici vous pouvez gérer vos dépôts GIT ainsi que vos clés ssh autorisées.</h5>
 									<img src="template/images/epitech_logo.jpg">
 								';
 							}

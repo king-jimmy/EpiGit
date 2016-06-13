@@ -9,7 +9,7 @@ if ($_GET['repository'] == 'delete')
 	if (isset($_GET['name']))
 	{
 		echo '<h2>Dépôt: '. $_GET['name'] .'</h2>
-			<h5 style="padding-top:30px;">Souhaiter vous supprimer le dépôt ?</h5>		
+			<h5 style="padding-top:30px;">Souhaitez vous supprimer le dépôt ?</h5>		
 			<a href="index.php?repository=confirm-delete&name='.$_GET['name'].'" class="btn btn-lg btn-success">Confirmer</a>	<a href="index.php?repository=view" class="btn btn-lg btn-default">Annuler</a>';
 	}
 }
@@ -36,17 +36,17 @@ else if ($_GET['repository'] == 'view')
 		{
 			$return_blih = blih_repository_set_acl($_GET['name'], $_POST['delete'], '');
 			if (isset($return_blih['error']))
-				echo '<div class="alert alert-danger">Une erreur est survenu, impossible de retirer les droits.</div>';
+				echo '<div class="alert alert-danger">Une erreur est survenue, impossible de retirer les droits.</div>';
 			else
-				echo '<div class="alert alert-success">'.$_POST['delete'].' n\'as plus aucun droits sur votre dépôt.</div>';
+				echo '<div class="alert alert-success">'.$_POST['delete'].' n\'as plus aucun droit sur votre dépôt.</div>';
 		}
 		if (isset($_POST['login']) && isset($_POST['right']))
 		{
 			$return_blih = blih_repository_set_acl($_GET['name'], $_POST['login'], $_POST['right']);
 			if (isset($return_blih['error']))
-				echo '<div class="alert alert-danger">Une erreur est survenu, impossible d\'ajouter les droits.</div>';
+				echo '<div class="alert alert-danger">Une erreur est survenue, impossible d\'ajouter les droits.</div>';
 			else
-				echo '<div class="alert alert-success">Les droits de '. get_right_text($_POST['right']) .' pour '. $_POST['login'] .' ont été ajouter.</div>';
+				echo '<div class="alert alert-success">Les droits de '. get_right_text($_POST['right']) .' pour '. $_POST['login'] .' ont été ajouté.</div>';
 		}
 
 		$infos = blih_repository_infos($_GET['name']);
@@ -110,14 +110,14 @@ else if ($_GET['repository'] == 'list')
 {
 	echo '<h2>Liste des dépôts</h2>';
 	if (isset($_GET['deleted']))
-		echo '<div class="alert alert-success">Le dépôt '.$_GET['deleted'].' à été supprimer</div>';
+		echo '<div class="alert alert-success">Le dépôt '.$_GET['deleted'].' à été supprimé</div>';
 	if (isset($_POST['repo']))
 		{
 			$return_blih = blih_create_repository($_POST['repo']);
 			if (isset($return_blih['error']))
-				echo '<div class="alert alert-danger">Une erreur est survenu durant la création du dépôt.</div>';
+				echo '<div class="alert alert-danger">Une erreur est survenue durant la création du dépôt.</div>';
 			else
-				echo '<div class="alert alert-success">Le dépôt '.$_POST['repo'].' à été créer.</div>';
+				echo '<div class="alert alert-success">Le dépôt '.$_POST['repo'].' à été créé.</div>';
 		}
 	echo '<table class="table table-striped" style="width:90%;">
 			  <thead>
